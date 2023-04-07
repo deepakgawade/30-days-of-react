@@ -40,13 +40,24 @@ const myNumbers1 = [1, 2, 3, 4, 5, 6];
 console.log(myNumbers.splice(0, 1));
 console.log(myNumbers1.splice(2, 2, 8));
 console.log(myNumbers1);
+
 console.log(counteries);
 
+if (counteries.indexOf("Ethiopia") != -1) {
+  console.log("Ethiopia".toUpperCase());
+} else {
+  counteries.push("Ethiopia");
+  console.log(counteries);
+}
 
-
-
-
-
-
-
-
+const user = {
+    firstName: 'Asabeneh',
+    lastName: 'Yetayeh',
+    age: 250,
+    country: 'Finland',
+    skills: ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python', 'D3.js'],
+  }
+  
+  for (const key in user) {
+    console.log(key, user[key])
+  }
