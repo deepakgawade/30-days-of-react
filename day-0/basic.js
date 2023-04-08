@@ -1,5 +1,6 @@
 //import { counteries } from "./counteries.js";
 const counteries = require("./counteries");
+
 const PI = 3.14;
 let js = "Javascript";
 const character = js.split("");
