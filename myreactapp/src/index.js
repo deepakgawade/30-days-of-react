@@ -4,11 +4,13 @@ import "./index.css";
 import App from "./App";
 import Number from "./Number";
 import reportWebVitals from "./reportWebVitals";
+import CountryApp from "./newLetter";
+import NumberPOE from "./NumberPOE";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Number />
+    <NumberPOE />
   </React.StrictMode>
 );
 
