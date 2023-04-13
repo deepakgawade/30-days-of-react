@@ -1,4 +1,4 @@
-const numberList = ({ start, end }) => {
+function numberList( start, end ){
   let range = [];
   for (let index = start; index < end; index++) {
     range.push(index);
@@ -12,46 +12,60 @@ const numlist = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var j = 2;
 
 function isPrime(n) {
-  if (n == 0 || n == 1) {
+  if (n === 0 || n === 1) {
     return false;
   }
-  if (n == j) {
-    return true;
+
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
   }
-  if (n % j == 0) {
-    return false;
-  }
-  j++;
-  return isPrime(n);
+
+  return true;
 }
 
 //const Age = (props) => <div> The person is {props.age} years old.</div>;
 const Square = ({ number }) => {
   const bo = isPrime(number);
   console.log(bo);
-  let text = "";
-  if (number % 2 === 0) {
-    text = "Even";
-    if (bo) {
-      text = "Prime";
+  let text = "blue";
+  let squareSTyle = {
+    backgroundColor: text,
+  };
+
+  if (number % 2 == 0) {
+    text = "green"; //"Even";
+    if (number==2) {
+      text = "yellow"; //"Prime";
     }
   } else {
-    text = "Odd";
+    text = "red"; //"Odd";
     if (bo) {
-      text = "Prime";
+      text = "yellow"; //"Prime";
     }
   }
+  squareSTyle = {
+    backgroundColor: text,
+  };
   return (
-    <div>
-      <h1>{text}</h1>
+    <div style={squareSTyle}>
+      <h1>{number}</h1>
     </div>
   );
 };
 
+
+
 function NumberPOE() {
   console.log(numlist);
+  const numlist2=numberList(0,32)
+  console.log(numlist2);
 
-  const squarelist = numlist.map((e) => <Square key={e} number={e} />);
+  const squarelist = numlist2.map((e) =>(<><Square key={e} number={e} /><Square key={e} number={e} />
+  <Square key={e} number={e} /></>) );
+
+
 
   return <div className="container">{squarelist}</div>;
 }
