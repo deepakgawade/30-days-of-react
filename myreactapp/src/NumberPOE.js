@@ -1,11 +1,11 @@
-function numberList( start, end ){
+function numberList(start, end) {
   let range = [];
   for (let index = start; index < end; index++) {
     range.push(index);
   }
 
   return range;
-};
+}
 
 const numlist = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -36,7 +36,7 @@ const Square = ({ number }) => {
 
   if (number % 2 == 0) {
     text = "green"; //"Even";
-    if (number==2) {
+    if (number == 2) {
       text = "yellow"; //"Prime";
     }
   } else {
@@ -47,27 +47,36 @@ const Square = ({ number }) => {
   }
   squareSTyle = {
     backgroundColor: text,
+    width: 50,
+    height: 50,
+    margin: 1,
+    justifyContent: "center",
+    display: "flex",
+    padding: 10,
   };
+
+  let pstyle = { justifyContent: "center" };
+
   return (
     <div style={squareSTyle}>
-      <h1>{number}</h1>
+      <p>{number}</p>
     </div>
   );
 };
 
-
-
 function NumberPOE() {
   console.log(numlist);
-  const numlist2=numberList(0,32)
+  const numlist2 = numberList(0, 32);
   console.log(numlist2);
 
-  const squarelist = numlist2.map((e) =>(<><Square key={e} number={e} /><Square key={e} number={e} />
-  <Square key={e} number={e} /></>) );
+  const squarelist = numlist2.map((e) => <Square key={e} number={e} />);
 
+  let outsidesquareSTyle = {
+    display: "flex",
+    flexWrap: "wrap",
+  };
 
-
-  return <div className="container">{squarelist}</div>;
+  return <div style={outsidesquareSTyle}>{squarelist}</div>;
 }
 
 export default NumberPOE;
