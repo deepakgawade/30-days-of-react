@@ -55,7 +55,7 @@ const Square = ({ number }) => {
     padding: 10,
   };
 
-  let pstyle = { justifyContent: "center" };
+
 
   return (
     <div style={squareSTyle}>
