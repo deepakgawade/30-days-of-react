@@ -7,11 +7,12 @@ import reportWebVitals from "./reportWebVitals";
 import CountryApp from "./newLetter";
 import NumberPOE from "./NumberPOE";
 import ColorApp from "./HexadecimalColor";
+import WorldPopulation from "./WorldPopulation";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ColorApp />
+    <WorldPopulation />
   </React.StrictMode>
 );
 
