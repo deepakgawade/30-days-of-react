@@ -8,11 +8,13 @@ import CountryApp from "./newLetter";
 import NumberPOE from "./NumberPOE";
 import ColorApp from "./HexadecimalColor";
 import WorldPopulation from "./WorldPopulation";
+import Counter from "./class_based_components/Counter";
+import Bio from "./class_based_components/Bio";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <WorldPopulation />
+    <Bio />
   </React.StrictMode>
 );
 

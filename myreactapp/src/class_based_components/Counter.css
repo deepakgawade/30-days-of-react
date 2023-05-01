@@ -1,0 +1,19 @@
+.main-box{display: flex;
+align-items: center;
+  justify-content: center;
+    width: 100%;flex-direction: column;
+    background-color: azure;
+    margin: 10px;
+    padding: 10px;
+}
+
+.count-button{width:250px;justify-content: center;
+    font-family: 'Poppins';
+    font-size: 20px;
+    margin: 10px;
+    color: darkslateblue;
+    background-color:beige;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
