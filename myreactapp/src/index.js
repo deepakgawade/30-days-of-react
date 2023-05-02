@@ -1,20 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import Number from "./Number";
-import reportWebVitals from "./reportWebVitals";
-import CountryApp from "./newLetter";
-import NumberPOE from "./NumberPOE";
-import ColorApp from "./HexadecimalColor";
-import WorldPopulation from "./WorldPopulation";
-import Counter from "./class_based_components/Counter";
-import Bio from "./class_based_components/Bio";
+
+import Forms from "./forms/Form";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Bio />
+    <Forms />
   </React.StrictMode>
 );
 
