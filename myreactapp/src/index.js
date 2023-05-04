@@ -3,11 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import Forms from "./forms/Form";
+import MultipleInputForm from "./forms/MultipleInputForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Forms />
+    <MultipleInputForm />
   </React.StrictMode>
 );
 
