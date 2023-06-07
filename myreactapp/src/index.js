@@ -4,11 +4,13 @@ import "./index.css";
 
 import Forms from "./forms/Form";
 import MultipleInputForm from "./forms/MultipleInputForm";
+import UncontrolledInputForm from "./forms/UncontrolledInputForm";
+import Lifecycle from "./lifecycle/LifeCycle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <MultipleInputForm />
+    <Lifecycle />
   </React.StrictMode>
 );
 
